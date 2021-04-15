@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,700;1,800&display=swap");
+:root {
+  --main-color: #121622;
+  --bg-color-2: #1f2638;
+  --secondary-main-color: #161c2a;
+  --text-color: #75768b;
+  --text-color-2: #5e3ed1;
+  --active-color: #212838;
+  --font-1: "Nunito", sans-serif;
+  --font-2: "Poppins", sans-serif;
+  --success: #448f26;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--font-1);
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--main-color);
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.page-container .side-nav {
+  background-color: var(--secondary-main-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-container .side-nav .brand-logo {
+  margin: 20px 0;
+}
+
+.page-container .side-nav .brand-logo h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.page-container .side-nav .brand-logo h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-container .side-nav .nav {
+  position: relative;
+}
+
+.page-container .side-nav .nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.page-container .side-nav .nav ul li {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.page-container .side-nav .nav ul li:last-child {
+  margin-top: auto;
+}
+
+.page-container .side-nav .nav ul li.active {
+  background-color: var(--active-color);
+}
+
+.page-container .side-nav .nav ul li.active a {
+  color: #fff;
+}
+
+.page-container .side-nav .nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: .9rem;
+  text-transform: capitalize;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.page-container .side-nav .nav ul li a:hover, .page-container .side-nav .nav ul li a.active {
+  background-color: var(--active-color);
+  color: #fff;
+}
+
+.page-container .side-nav .nav ul li a i {
+  padding-right: 10px;
+  font-size: 1.5rem;
+}
+
+.page-container .main-section {
+  width: 100%;
+  padding: 20px 30px 20px 10px;
+}
+
+.page-container .main-section .menu-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--secondary-main-color);
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.page-container .main-section .menu-bar .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-container .main-section .menu-bar .search i {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-left: 15px;
+}
+
+.page-container .main-section .menu-bar .search input {
+  background-color: transparent;
+  color: #fff;
+  margin-left: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.page-container .main-section .menu-bar .language {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.page-container .main-section .menu-bar .language i {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+.page-container .main-section .menu-bar .language span {
+  text-transform: uppercase;
+  font-size: .9rem;
+  color: var(--text-color);
+}
+
+.page-container .main-section .menu-bar .profile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-container .main-section .menu-bar .profile img {
+  display: block;
+  position: relative;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 2px solid black;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 5px;
+}
+
+.page-container .main-section .menu-bar .profile span {
+  font-size: .8rem;
+  color: var(--text-color);
+}
+
+.page-container .main-section .menu-bar .profile i {
+  color: var(--text-color);
+  font-size: 1.3rem;
+}
+
+.page-container .main-area {
+  background-color: var(--secondary-main-color);
+  margin-top: 30px;
+  padding: 15px 0 30px;
+  border-radius: 7px;
+}
+
+.page-container .main-area .container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-container .main-area .container .header {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-color-2);
+}
+
+.page-container .main-area .container .header i {
+  margin-right: 15px;
+  font-size: 1.6rem;
+}
+
+.page-container .main-area .container .header h6 {
+  font-size: 1.2rem;
+  font-family: var(--font-2);
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.page-container .main-area .container .coin-group-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.page-container .main-area .container .coin-group-header span {
+  position: relative;
+  display: inline-block;
+  color: var(--text-color);
+  font-size: .9rem;
+  padding: 8px 0;
+  text-transform: capitalize;
+}
+
+.page-container .main-area .container .coin-group-header span:first-child {
+  color: var(--text-color-2);
+  margin-right: 20px;
+}
+
+.page-container .main-area .container .coin-group-header span.active {
+  color: var(--text-color-2);
+  border-bottom: 2px solid var(--text-color-2);
+}
+
+.page-container .main-area .container .coin-group-cards {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+  gap: 45px;
+}
+
+.page-container .main-area .container .coin-group-cards .card {
+  height: 230px;
+  border-radius: 10px;
+  padding: 10pX 20px;
+  background-color: var(--bg-color-2);
+}
+
+.page-container .main-area .container .coin-group-cards .card-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #676767;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-container .main-area .container .coin-group-cards .card-header .coin-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-container .main-area .container .coin-group-cards .card-header .coin-name img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.page-container .main-area .container .coin-group-cards .card-header .coin-name .names h5 {
+  color: var(--text-color-2);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.page-container .main-area .container .coin-group-cards .card-header .coin-name .names p {
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.page-container .main-area .container .coin-group-cards .card-header .time {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: .75rem;
+  color: var(--text-color);
+  background-color: #1b2133;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row:first-child .rate {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--success);
+  font-size: .88rem;
+  margin-left: 30px;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row:first-child .rate i {
+  font-size: 1.3rem;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row .value {
+  position: relative;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row .value .heading {
+  color: #707186;
+  font-size: .85rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row .value .amount {
+  color: var(--text-color);
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row .value .amount.coin {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row.row-2 {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row.row-2 .value .heading {
+  font-size: .8rem;
+  text-transform: capitalize;
+}
+
+.page-container .main-area .container .coin-group-cards .card-content .row.row-2 .value .amount {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
